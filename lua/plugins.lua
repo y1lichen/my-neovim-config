@@ -4,6 +4,8 @@ return require("packer").startup(function()
       use "wbthomason/packer.nvim"
       --Nvim LSP 客户端的快速入门配置
       use "neovim/nvim-lspconfig"
+	  -- improve startup time
+	  use 'lewis6991/impatient.nvim'
 	  --
 	  use 'phaazon/hop.nvim'
       --自动提示插件
@@ -32,9 +34,9 @@ return require("packer").startup(function()
 	  -- treesitter
 	  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
       --主题安装
-	  -- use 'yorik1984/newpaper.nvim'
       -- use 'navarasu/onedark.nvim'
-	  use "rafamadriz/neon"
+	  use { "ellisonleao/gruvbox.nvim" }
+	  use "lukas-reineke/indent-blankline.nvim"
 	  --
 	  use({"kylechui/nvim-surround",
     	config = function()
@@ -43,10 +45,15 @@ return require("packer").startup(function()
         })
     	end
 	})
+	  -- auto-detect indent
+	  use 'zsugabubus/crazy8.nvim'
+	  -- text object
+	  use 'wellle/targets.vim'
 	  --
 	  use {
 		"windwp/nvim-autopairs",
     	config = function() require("nvim-autopairs").setup {} end}
+	  -- statusline
 	  use {
   		'nvim-lualine/lualine.nvim',
   		requires = { 'kyazdani42/nvim-web-devicons', opt = true }}
