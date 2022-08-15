@@ -21,9 +21,11 @@ return require("packer").startup(function()
 	  use "ray-x/lsp_signature.nvim"
 	  -- comment
 	  use "terrortylor/nvim-comment"
-      -- java语言支持
+      -- java
 	  use "mfussenegger/nvim-jdtls"
-      -- 代码段提示
+	  -- c/c++
+	  use 'p00f/clangd_extensions.nvim'
+     -- 代码段提示
       use {
         "L3MON4D3/LuaSnip",
         requires = {
@@ -56,6 +58,9 @@ return require("packer").startup(function()
 	  -- statusline
 	  use {
   		'nvim-lualine/lualine.nvim',
-  		requires = { 'kyazdani42/nvim-web-devicons', opt = true }}
+  		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+	  }
+	  -- map jj,kk for escape
+	  use 'max397574/better-escape.nvim'
 	  use 'voldikss/vim-floaterm'
 end)

@@ -13,10 +13,6 @@ vim.g.mapleader = " "
 vim.keymap.set('', '<Leader>w', ':HopWord<CR>')
 vim.keymap.set('', '<Leader>p', ':HopPattern<CR>')
 vim.keymap.set('', '<Leader>h', ':nohl<CR>')
--- keymap('n', 'L', '$', opts)
--- keymap('v', 'L', '$', opts)
--- keymap('n', 'H', '^', opts)
--- keymap('v', 'H', '^', opts)
 ------按键映射 end  ------
 -- 文件编码格式
 vim.opt.fileencoding = "utf-8"
@@ -32,6 +28,8 @@ vim.opt.ignorecase = true       -- Ignore case letters when search
 vim.opt.smartcase = true        -- Ignore lowercase for the whole pattern
 --
 vim.opt.termguicolors = true
+--
+vim.o.autochdir = true
 -- tab=4个空格
 vim.opt.tabstop=4
 vim.opt.shiftwidth=4
@@ -57,8 +55,8 @@ vim.keymap.set('', '<Leader>pft', ':FloatermPrev<CR>')
 vim.keymap.set('', '<Leader>nft', ':FloatermNext<CR>')
 vim.keymap.set('', '<Leader>tft', ':FloatermToggle<CR>')
 -- buffer navigation
-vim.keymap.set('', '<Leader>bp', ':bprev<CR>')
-vim.keymap.set('', '<Leader>bn', ':bnext<CR>')
+vim.keymap.set('', '<Leader>pb', ':bprev<CR>')
+vim.keymap.set('', '<Leader>nb', ':bnext<CR>')
 vim.cmd[[
 hi Floaterm guibg=white
 hi FloatermBorder guifg=black
