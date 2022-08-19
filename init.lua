@@ -11,6 +11,7 @@ local keymap = vim.api.nvim_set_keymap
 --把空格键设置成<leader>
 vim.g.mapleader = " "
 vim.keymap.set('', '<Leader>w', ':HopWord<CR>')
+vim.keymap.set('', '<Leader>l', ':HopLine<CR>')
 vim.keymap.set('', '<Leader>p', ':HopPattern<CR>')
 vim.keymap.set('', '<Leader>h', ':nohl<CR>')
 ------按键映射 end  ------
@@ -26,6 +27,8 @@ vim.opt.splitright = true       -- Vertical split to the right
 vim.opt.splitbelow = true       -- Horizontal split to the bottom
 vim.opt.ignorecase = true       -- Ignore case letters when search
 vim.opt.smartcase = true        -- Ignore lowercase for the whole pattern
+--
+vim.opt.showmode = false
 --
 vim.opt.termguicolors = true
 --
