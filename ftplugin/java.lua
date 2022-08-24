@@ -35,5 +35,11 @@ bundles = {
 }
 require("jdtls").start_or_attach(config)
 require("jdtls.setup").add_commands()
-vim.cmd [[autocmd BufWritePre *.java lua require'jdtls'.organize_imports()]]
-vim.cmd [[autocmd BufWritePre *.java lua vim.lsp.buf.formatting()]]
+--
+vim.keymap.set('n', '<leader>o', '<Cmd>lua require\'jdtls\'.organize_imports()<CR>')
+vim.keymap.set('n', '<leader>f', '<Cmd>lua vim.lsp.buf.formatting()<CR>')
+vim.keymap.set('n', 'crv', '<Cmd>lua require(\'jdtls\').extract_variable()<CR>')
+vim.keymap.set('v', 'crv', '<Esc><Cmd>lua require(\'jdtls\').extract_variable(true)<CR>')
+vim.keymap.set('n', 'crc', '<Cmd>require(\'jdtls\').extract_constant()<CR>')
+vim.keymap.set('v', 'crc', '<Esc><Cmd>lua require(\'jdtls\').extract_constant(true)<CR>')
+vim.keymap.set('v', 'crm', '<Esc><Cmd>lua require(\'jdtls\').extract_method(true)<CR>')

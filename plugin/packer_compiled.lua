@@ -114,6 +114,11 @@ _G.packer_plugins = {
     path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/lxyoucan/friendly-snippets"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   ["gruvbox.nvim"] = {
     loaded = true,
     path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/gruvbox.nvim",
@@ -181,15 +186,30 @@ _G.packer_plugins = {
     path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["specs.nvim"] = {
+    loaded = true,
+    path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/specs.nvim",
+    url = "https://github.com/edluffy/specs.nvim"
+  },
   ["targets.vim"] = {
     loaded = true,
     path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/targets.vim",
     url = "https://github.com/wellle/targets.vim"
+  },
+  ["typescript.nvim"] = {
+    loaded = true,
+    path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/typescript.nvim",
+    url = "https://github.com/jose-elias-alvarez/typescript.nvim"
   },
   ["vim-floaterm"] = {
     loaded = true,

@@ -6,6 +6,9 @@ return require("packer").startup(function()
       use "neovim/nvim-lspconfig"
 	  -- improve startup time
 	  use 'lewis6991/impatient.nvim'
+	  -- git
+	  use 'lewis6991/gitsigns.nvim'
+	  use 'edluffy/specs.nvim'
 	  --
 	  use 'phaazon/hop.nvim'
       --自动提示插件
@@ -25,6 +28,8 @@ return require("packer").startup(function()
 	  use "mfussenegger/nvim-jdtls"
 	  -- c/c++
 	  use 'p00f/clangd_extensions.nvim'
+	  --
+	  use 'jose-elias-alvarez/typescript.nvim'
      -- 代码段提示
       use {
         "L3MON4D3/LuaSnip",
