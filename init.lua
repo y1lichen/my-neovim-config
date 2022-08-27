@@ -5,10 +5,10 @@ require('impatient')
 -- theme
 vim.o.background = "light"
 vim.cmd([[colorscheme gruvbox]])
-------按键映射 start----:w
+--
 local opts = {noremap = true, silent = true}
 local keymap = vim.api.nvim_set_keymap
---把空格键设置成<leader>
+-- set space as leader
 vim.g.mapleader = " "
 vim.keymap.set('', '<Leader>w', ':HopWord<CR>')
 vim.keymap.set('', '<Leader>l', ':HopLine<CR>')
@@ -52,14 +52,6 @@ autocmd!
 au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=500})
 augroup END
 ]]
--- floaterm
-vim.keymap.set('', '<Leader>ft', ':FloatermNew<CR>')
-vim.keymap.set('', '<Leader>pft', ':FloatermPrev<CR>')
-vim.keymap.set('', '<Leader>nft', ':FloatermNext<CR>')
-vim.keymap.set('', '<Leader>tft', ':FloatermToggle<CR>')
-vim.keymap.set('', '<Leader>tft', ':FloatermToggle<CR>')
-vim.keymap.set('n', '<F5>', ':FloatermToggle<CR>')
-vim.keymap.set('t', '<F5>', '<C-\\><C-n>:FloatermToggle<CR>')
 -- buffer navigation
 vim.keymap.set('', '<Leader>pb', ':bprev<CR>')
 vim.keymap.set('', '<Leader>nb', ':bnext<CR>')

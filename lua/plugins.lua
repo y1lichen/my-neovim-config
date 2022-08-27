@@ -43,6 +43,7 @@ return require("packer").startup(function()
       --主题安装
       -- use 'navarasu/onedark.nvim'
 	  use { "ellisonleao/gruvbox.nvim" }
+	  use 'folke/tokyonight.nvim'
 	  use "lukas-reineke/indent-blankline.nvim"
 	  --
 	  use({"kylechui/nvim-surround",
@@ -67,5 +68,7 @@ return require("packer").startup(function()
 	  }
 	  -- map jj,kk for escape
 	  use 'max397574/better-escape.nvim'
-	  use 'voldikss/vim-floaterm'
+	  -- use 'voldikss/vim-floaterm'
+	  use "samjwill/nvim-unception"
+	  use {"akinsho/toggleterm.nvim", tag = 'v2.*'}
 end)
