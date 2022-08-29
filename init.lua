@@ -4,7 +4,7 @@ require("plugins")
 require('impatient')
 -- theme
 vim.o.background = "light"
-vim.cmd([[colorscheme gruvbox]])
+vim.cmd([[colorscheme dayfox]])
 --
 local opts = {noremap = true, silent = true}
 local keymap = vim.api.nvim_set_keymap
@@ -52,11 +52,5 @@ autocmd!
 au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=500})
 augroup END
 ]]
--- buffer navigation
-vim.keymap.set('', '<Leader>pb', ':bprev<CR>')
-vim.keymap.set('', '<Leader>nb', ':bnext<CR>')
-vim.cmd[[
-hi Floaterm guibg=white
-hi FloatermBorder guifg=black
-au BufAdd,BufNewFile * nested tab sball
-]]
+-- ctrl-p
+vim.keymap.set('n', '<C-p>', ':lua require(\'fzf-lua\').files({ cwd = \'~/\' })<CR>')

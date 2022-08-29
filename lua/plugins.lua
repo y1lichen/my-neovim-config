@@ -1,3 +1,4 @@
+
 vim.cmd [[packadd packer.nvim]]
 return require("packer").startup(function()
       -- Packer可以管理自己的更新
@@ -30,6 +31,8 @@ return require("packer").startup(function()
 	  use 'p00f/clangd_extensions.nvim'
 	  --
 	  use 'jose-elias-alvarez/typescript.nvim'
+	  -- rust
+	  use 'simrat39/rust-tools.nvim'
      -- 代码段提示
       use {
         "L3MON4D3/LuaSnip",
@@ -43,7 +46,7 @@ return require("packer").startup(function()
       --主题安装
       -- use 'navarasu/onedark.nvim'
 	  use { "ellisonleao/gruvbox.nvim" }
-	  use 'folke/tokyonight.nvim'
+	  use "EdenEast/nightfox.nvim"
 	  use "lukas-reineke/indent-blankline.nvim"
 	  --
 	  use({"kylechui/nvim-surround",
@@ -68,7 +71,11 @@ return require("packer").startup(function()
 	  }
 	  -- map jj,kk for escape
 	  use 'max397574/better-escape.nvim'
-	  -- use 'voldikss/vim-floaterm'
+	  --
+	  use { 'ibhagwan/fzf-lua',
+		requires = { 'kyazdani42/nvim-web-devicons' }
+	  }
+	  -- floaterm
 	  use "samjwill/nvim-unception"
 	  use {"akinsho/toggleterm.nvim", tag = 'v2.*'}
 end)
