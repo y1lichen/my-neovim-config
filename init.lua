@@ -3,8 +3,10 @@ require("plugins")
 -- imrove startup performance
 require('impatient')
 -- theme
-vim.o.background = "light"
+-- vim.o.background = "light"
+-- vim.o.background = "dark"
 vim.cmd([[colorscheme dayfox]])
+-- vim.cmd("colorscheme melange")
 --
 local opts = {noremap = true, silent = true}
 local keymap = vim.api.nvim_set_keymap
@@ -43,8 +45,6 @@ vim.o.mouse="a"
 vim.o.backup = false
 vim.o.writebackup = false
 vim.o.swapfile = false
---
-require "lsp_signature".setup()
 -- highlight yanked text
 vim.cmd[[
 augroup highlight_yank

@@ -47,7 +47,10 @@ return require("packer").startup(function()
       -- use 'navarasu/onedark.nvim'
 	  use { "ellisonleao/gruvbox.nvim" }
 	  use "EdenEast/nightfox.nvim"
+	  use "savq/melange"
 	  use "lukas-reineke/indent-blankline.nvim"
+	  --
+	  use "abecodes/tabout.nvim"
 	  --
 	  use({"kylechui/nvim-surround",
     	config = function()

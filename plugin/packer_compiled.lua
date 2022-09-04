@@ -154,6 +154,11 @@ _G.packer_plugins = {
     path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  melange = {
+    loaded = true,
+    path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/melange",
+    url = "https://github.com/savq/melange"
+  },
   ["nightfox.nvim"] = {
     loaded = true,
     path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
@@ -202,8 +207,9 @@ _G.packer_plugins = {
     url = "https://github.com/samjwill/nvim-unception"
   },
   ["nvim-web-devicons"] = {
-    loaded = true,
-    path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/chenli/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["packer.nvim"] = {
@@ -220,6 +226,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/specs.nvim",
     url = "https://github.com/edluffy/specs.nvim"
+  },
+  ["tabout.nvim"] = {
+    loaded = true,
+    path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/tabout.nvim",
+    url = "https://github.com/abecodes/tabout.nvim"
   },
   ["targets.vim"] = {
     loaded = true,

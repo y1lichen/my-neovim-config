@@ -22,7 +22,7 @@ require("toggleterm").setup{
   auto_scroll = true, -- automatically scroll to the bottom on terminal output
   -- This field is only relevant if direction is set to 'float'
   float_opts = {
-    border = 'double',
+    border = 'single',
     width = 55,
     height = 18,
     winblend = 3,
