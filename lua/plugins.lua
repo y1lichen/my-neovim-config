@@ -9,7 +9,6 @@ return require("packer").startup(function()
 	  use 'lewis6991/impatient.nvim'
 	  -- git
 	  use 'lewis6991/gitsigns.nvim'
-	  use 'edluffy/specs.nvim'
 	  --
 	  use 'phaazon/hop.nvim'
       --自动提示插件
@@ -81,4 +80,5 @@ return require("packer").startup(function()
 	  -- floaterm
 	  use "samjwill/nvim-unception"
 	  use {"akinsho/toggleterm.nvim", tag = 'v2.*'}
+      use 'mfussenegger/nvim-dap'
 end)

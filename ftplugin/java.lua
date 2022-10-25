@@ -30,16 +30,27 @@ java = {
 init_options = {
 
 bundles = {
+	vim.fn.glob("/Users/chenli/Dev/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar")
+};
 }
 }
-}
+config['on_attach'] = function(client, bufnr)
+  -- With `hotcodereplace = 'auto' the debug adapter will try to apply code changes
+  -- you make during a debug session immediately.
+  -- Remove the option if you do not want that.
+  -- You can use the `JdtHotcodeReplace` command to trigger it manually
+  require('jdtls').setup_dap({ hotcodereplace = 'auto' })
+  require('jdtls.dap').setup_dap_main_class_configs()
+end
+
 require("jdtls").start_or_attach(config)
 require("jdtls.setup").add_commands()
 --
 vim.keymap.set('n', '<leader>o', '<Cmd>lua require\'jdtls\'.organize_imports()<CR>')
-vim.keymap.set('n', '<leader>f', '<Cmd>lua vim.lsp.buf.formatting()<CR>')
+vim.keymap.set('n', '<leader>f', '<Cmd>lua vim.lsp.buf.format {async = true}<CR>')
 vim.keymap.set('n', 'crv', '<Cmd>lua require(\'jdtls\').extract_variable()<CR>')
 vim.keymap.set('v', 'crv', '<Esc><Cmd>lua require(\'jdtls\').extract_variable(true)<CR>')
 vim.keymap.set('n', 'crc', '<Cmd>require(\'jdtls\').extract_constant()<CR>')
 vim.keymap.set('v', 'crc', '<Esc><Cmd>lua require(\'jdtls\').extract_constant(true)<CR>')
 vim.keymap.set('v', 'crm', '<Esc><Cmd>lua require(\'jdtls\').extract_method(true)<CR>')
+vim.keymap.set('n', '<F5>', '<Cmd>lua require\'dap\'.continue()<CR>')
