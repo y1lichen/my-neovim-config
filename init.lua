@@ -1,7 +1,7 @@
 -- plugins manager
 require("plugins")
 -- imrove startup performance
-require('impatient')
+vim.loader.enable()
 -- theme
 -- vim.o.background = "light"
 -- vim.o.background = "dark"
@@ -34,7 +34,7 @@ vim.opt.showmode = false
 --
 vim.opt.termguicolors = true
 --
-vim.o.autochdir = true
+-- vim.o.autochdir = true
 -- tab=4个空格
 vim.opt.tabstop=4
 vim.opt.shiftwidth=4

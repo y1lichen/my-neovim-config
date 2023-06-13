@@ -114,15 +114,15 @@ _G.packer_plugins = {
     path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/crazy8.nvim",
     url = "https://github.com/zsugabubus/crazy8.nvim"
   },
+  ["flutter-tools.nvim"] = {
+    loaded = true,
+    path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/flutter-tools.nvim",
+    url = "https://github.com/akinsho/flutter-tools.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/lxyoucan/friendly-snippets"
-  },
-  ["fzf-lua"] = {
-    loaded = true,
-    path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/fzf-lua",
-    url = "https://github.com/ibhagwan/fzf-lua"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -138,11 +138,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/hop.nvim",
     url = "https://github.com/phaazon/hop.nvim"
-  },
-  ["impatient.nvim"] = {
-    loaded = true,
-    path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/impatient.nvim",
-    url = "https://github.com/lewis6991/impatient.nvim"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
@@ -163,6 +158,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/melange",
     url = "https://github.com/savq/melange"
+  },
+  ["move.nvim"] = {
+    loaded = true,
+    path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/move.nvim",
+    url = "https://github.com/fedepujol/move.nvim"
   },
   ["nightfox.nvim"] = {
     loaded = true,
@@ -206,15 +206,16 @@ _G.packer_plugins = {
     path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/nvim-surround",
     url = "https://github.com/kylechui/nvim-surround"
   },
+  ["nvim-terminal"] = {
+    config = { "\27LJ\2\nX\0\0\3\0\6\0\n6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\3\0'\2\4\0B\0\2\0029\0\5\0B\0\1\1K\0\1\0\nsetup\18nvim-terminal\frequire\vhidden\6o\bvim\0" },
+    loaded = true,
+    path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/nvim-terminal",
+    url = "https://github.com/s1n7ax/nvim-terminal"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
-  },
-  ["nvim-unception"] = {
-    loaded = true,
-    path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/nvim-unception",
-    url = "https://github.com/samjwill/nvim-unception"
   },
   ["nvim-web-devicons"] = {
     loaded = false,
@@ -226,6 +227,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["plenary.nvim"] = {
+    loaded = true,
+    path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/plenary.nvim",
+    url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["rust-tools.nvim"] = {
     loaded = true,
@@ -242,10 +248,10 @@ _G.packer_plugins = {
     path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/targets.vim",
     url = "https://github.com/wellle/targets.vim"
   },
-  ["toggleterm.nvim"] = {
+  ["telescope.nvim"] = {
     loaded = true,
-    path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
-    url = "https://github.com/akinsho/toggleterm.nvim"
+    path = "/Users/chenli/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["typescript.nvim"] = {
     loaded = true,
@@ -255,14 +261,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-surround
-time([[Config for nvim-surround]], true)
-try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
-time([[Config for nvim-surround]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
+-- Config for: nvim-terminal
+time([[Config for nvim-terminal]], true)
+try_loadstring("\27LJ\2\nX\0\0\3\0\6\0\n6\0\0\0009\0\1\0+\1\2\0=\1\2\0006\0\3\0'\2\4\0B\0\2\0029\0\5\0B\0\1\1K\0\1\0\nsetup\18nvim-terminal\frequire\vhidden\6o\bvim\0", "config", "nvim-terminal")
+time([[Config for nvim-terminal]], false)
+-- Config for: nvim-surround
+time([[Config for nvim-surround]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
+time([[Config for nvim-surround]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

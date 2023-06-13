@@ -5,8 +5,6 @@ return require("packer").startup(function()
       use "wbthomason/packer.nvim"
       --Nvim LSP 客户端的快速入门配置
       use "neovim/nvim-lspconfig"
-	  -- improve startup time
-	  use 'lewis6991/impatient.nvim'
 	  -- git
 	  use 'lewis6991/gitsigns.nvim'
 	  --
@@ -74,11 +72,14 @@ return require("packer").startup(function()
 	  -- map jj,kk for escape
 	  use 'max397574/better-escape.nvim'
 	  --
-	  use { 'ibhagwan/fzf-lua',
-		requires = { 'kyazdani42/nvim-web-devicons' }
+	  use {
+		'nvim-telescope/telescope.nvim', tag = '0.1.1',
+	    requires = { {'nvim-lua/plenary.nvim'} }
 	  }
-	  -- floaterm
-	  use "samjwill/nvim-unception"
-	  use {"akinsho/toggleterm.nvim", tag = 'v2.*'}
+	  -- debug
       use 'mfussenegger/nvim-dap'
+	  -- flutter
+	  use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
+	  -- move a section of code
+	  use 'fedepujol/move.nvim'
 end)
