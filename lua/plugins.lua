@@ -78,8 +78,15 @@ return require("packer").startup(function()
 	  }
 	  -- debug
       use 'mfussenegger/nvim-dap'
+	  -- smooth-scroll
+	  use 'karb94/neoscroll.nvim'
 	  -- flutter
 	  use {'akinsho/flutter-tools.nvim', requires = 'nvim-lua/plenary.nvim'}
 	  -- move a section of code
 	  use 'fedepujol/move.nvim'
+	  -- for file explorer
+	  use {
+		'stevearc/oil.nvim',
+		config = function() require('oil').setup() end
+	  }
 end)

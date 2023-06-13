@@ -12,9 +12,6 @@ local opts = {noremap = true, silent = true}
 local keymap = vim.api.nvim_set_keymap
 -- set space as leader
 vim.g.mapleader = " "
-vim.keymap.set('', '<Leader>w', ':HopWord<CR>')
-vim.keymap.set('', '<Leader>l', ':HopLine<CR>')
-vim.keymap.set('', '<Leader>p', ':HopPattern<CR>')
 vim.keymap.set('', '<Leader>h', ':nohl<CR>')
 ------按键映射 end  ------
 -- 文件编码格式
@@ -52,5 +49,10 @@ autocmd!
 au TextYankPost * silent! lua vim.highlight.on_yank({higroup="Visual", timeout=500})
 augroup END
 ]]
--- ctrl-p
-vim.keymap.set('n', '<C-p>', ':lua require(\'fzf-lua\').files({ cwd = \'~/\' })<CR>')
+--
+-- keep cursor shape after leaving
+vim.api.nvim_create_autocmd("VimLeave", {
+  callback = function()
+    vim.cmd [[set guicursor=a:ver100]]
+  end,
+})
