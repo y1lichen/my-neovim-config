@@ -42,8 +42,8 @@ return require("packer").startup(function()
 	  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
       --主题安装
       -- use 'navarasu/onedark.nvim'
-	  use { "ellisonleao/gruvbox.nvim" }
-	  use "EdenEast/nightfox.nvim"
+	  -- use { "ellisonleao/gruvbox.nvim" }
+	  -- use "EdenEast/nightfox.nvim"
 	  use "savq/melange"
 	  use "lukas-reineke/indent-blankline.nvim"
 	  --
@@ -59,7 +59,14 @@ return require("packer").startup(function()
 	  -- auto-detect indent
 	  use 'zsugabubus/crazy8.nvim'
 	  -- text object
-	  use 'wellle/targets.vim'
+	  use({
+		  "XXiaoA/ns-textobject.nvim",
+		  after = "nvim-surround",
+		  config = function()
+			  require("ns-textobject").setup({
+			  })
+		  end
+	  })
 	  --
 	  use {
 		"windwp/nvim-autopairs",
@@ -76,6 +83,12 @@ return require("packer").startup(function()
 		'nvim-telescope/telescope.nvim', tag = '0.1.1',
 	    requires = { {'nvim-lua/plenary.nvim'} }
 	  }
+	  use {
+		"jiaoshijie/undotree",
+		requires = {
+		  "nvim-lua/plenary.nvim",
+		},
+	  }
 	  -- debug
       use 'mfussenegger/nvim-dap'
 	  -- smooth-scroll
@@ -89,4 +102,16 @@ return require("packer").startup(function()
 		'stevearc/oil.nvim',
 		config = function() require('oil').setup() end
 	  }
+	  -- auto rename tag
+	  use {
+		'windwp/nvim-ts-autotag',
+		config = function() require('nvim-ts-autotag').setup() end
+	  }
+	  -- auto detect indent
+	  use {
+		'nmac427/guess-indent.nvim',
+		config = function() require('guess-indent').setup {} end,
+	  }
+	  --repl
+	  use {'Vigemus/iron.nvim'}
 end)

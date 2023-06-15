@@ -3,17 +3,15 @@ require("plugins")
 -- imrove startup performance
 vim.loader.enable()
 -- theme
--- vim.o.background = "light"
+vim.o.background = "light"
 -- vim.o.background = "dark"
-vim.cmd([[colorscheme dayfox]])
--- vim.cmd("colorscheme melange")
+-- vim.cmd([[colorscheme dayfox]])
+vim.cmd.colorscheme 'melange'
 --
 local opts = {noremap = true, silent = true}
 local keymap = vim.api.nvim_set_keymap
 -- set space as leader
 vim.g.mapleader = " "
-vim.keymap.set('', '<Leader>h', ':nohl<CR>')
-------按键映射 end  ------
 -- 文件编码格式
 vim.opt.fileencoding = "utf-8"
 -- show relative number
@@ -56,3 +54,5 @@ vim.api.nvim_create_autocmd("VimLeave", {
     vim.cmd [[set guicursor=a:ver100]]
   end,
 })
+--
+vim.api.nvim_create_user_command('Bufonly', ':%bd|e#', {})
