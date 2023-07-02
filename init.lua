@@ -5,8 +5,8 @@ vim.loader.enable()
 -- theme
 vim.o.background = "light"
 -- vim.o.background = "dark"
--- vim.cmd([[colorscheme dayfox]])
 vim.cmd.colorscheme 'melange'
+-- vim.cmd.colorscheme 'onedark'
 --
 local opts = {noremap = true, silent = true}
 local keymap = vim.api.nvim_set_keymap

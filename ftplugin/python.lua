@@ -1,4 +1,14 @@
-require'lspconfig'.pyright.setup{}
+require'lspconfig'.pyright.setup{
+  settings = {
+          python = {
+            venvPath = ".",
+            pythonPath = "/opt/homebrew/Caskroom/miniforge/base/bin/python",
+            analysis = {
+              extraPaths = {"."}
+            }
+          }
+        }
+}
 
 
 -- iron repl keymapping

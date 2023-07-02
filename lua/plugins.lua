@@ -8,7 +8,8 @@ return require("packer").startup(function()
 	  -- git
 	  use 'lewis6991/gitsigns.nvim'
 	  --
-	  use 'phaazon/hop.nvim'
+	  -- use 'phaazon/hop.nvim'
+	  use 'rlane/pounce.nvim'
       --自动提示插件
       use {
         "hrsh7th/nvim-cmp",
@@ -41,9 +42,10 @@ return require("packer").startup(function()
 	  -- treesitter
 	  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
       --主题安装
-      -- use 'navarasu/onedark.nvim'
 	  -- use { "ellisonleao/gruvbox.nvim" }
 	  -- use "EdenEast/nightfox.nvim"
+	  -- theme
+	  use 'navarasu/onedark.nvim'
 	  use "savq/melange"
 	  use "lukas-reineke/indent-blankline.nvim"
 	  --
