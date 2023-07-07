@@ -8,8 +8,7 @@ return require("packer").startup(function()
 	  -- git
 	  use 'lewis6991/gitsigns.nvim'
 	  --
-	  -- use 'phaazon/hop.nvim'
-	  use 'rlane/pounce.nvim'
+	  use 'folke/flash.nvim'
       --自动提示插件
       use {
         "hrsh7th/nvim-cmp",
@@ -19,6 +18,8 @@ return require("packer").startup(function()
           "lxyoucan/cmp-path" --自动提示硬盘上的文件
         }
       }
+	  -- 
+	  use "jose-elias-alvarez/null-ls.nvim"
 	  --
 	  use "ray-x/lsp_signature.nvim"
 	  -- comment
@@ -78,8 +79,6 @@ return require("packer").startup(function()
   		'nvim-lualine/lualine.nvim',
   		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	  }
-	  -- map jj,kk for escape
-	  use 'max397574/better-escape.nvim'
 	  --
 	  use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.1',
