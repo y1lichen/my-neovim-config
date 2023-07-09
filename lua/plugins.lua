@@ -9,6 +9,7 @@ return require("packer").startup(function()
 	  use 'lewis6991/gitsigns.nvim'
 	  --
 	  use 'folke/flash.nvim'
+	  use { "chrisgrieser/nvim-spider" }
       --自动提示插件
       use {
         "hrsh7th/nvim-cmp",
@@ -46,6 +47,7 @@ return require("packer").startup(function()
 	  -- use { "ellisonleao/gruvbox.nvim" }
 	  -- use "EdenEast/nightfox.nvim"
 	  -- theme
+	  use 'ofirgall/ofirkai.nvim'
 	  use 'navarasu/onedark.nvim'
 	  use "savq/melange"
 	  use "lukas-reineke/indent-blankline.nvim"
