@@ -86,6 +86,15 @@ return require("packer").startup(function()
 		'nvim-telescope/telescope.nvim', tag = '0.1.1',
 	    requires = { {'nvim-lua/plenary.nvim'} }
 	  }
+	  use { "kkharji/sqlite.lua" }
+	  use {
+		'prochri/telescope-all-recent.nvim',
+		config = function()
+		  require'telescope-all-recent'.setup{
+			-- your config goes here
+		  }
+		end
+	  }
 	  use {
 		"jiaoshijie/undotree",
 		requires = {
