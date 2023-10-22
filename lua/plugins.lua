@@ -14,12 +14,13 @@ return require("packer").startup(function()
       use {
         "hrsh7th/nvim-cmp",
         requires = {
-          "lxyoucan/cmp-nvim-lsp", --neovim 内置 LSP 客户端的 nvim-cmp 源
-          "lxyoucan/cmp-buffer", --从buffer中智能提示
-          "lxyoucan/cmp-path" --自动提示硬盘上的文件
+		  use {'hrsh7th/cmp-nvim-lsp'},
+		  use {'hrsh7th/cmp-buffer'},
+		  use {'hrsh7th/cmp-path'},
+		  use {'hrsh7th/cmp-cmdline'},
         }
       }
-	  -- 
+	  --
 	  use "jose-elias-alvarez/null-ls.nvim"
 	  --
 	  use "ray-x/lsp_signature.nvim"
@@ -38,7 +39,7 @@ return require("packer").startup(function()
         "L3MON4D3/LuaSnip",
         requires = {
           "lxyoucan/cmp_luasnip", -- Snippets source for nvim-cmp
-          "lxyoucan/friendly-snippets" --代码段合集
+		  'rafamadriz/friendly-snippets'
         }
       }
 	  -- treesitter
@@ -89,11 +90,6 @@ return require("packer").startup(function()
 	  use { "kkharji/sqlite.lua" }
 	  use {
 		'prochri/telescope-all-recent.nvim',
-		config = function()
-		  require'telescope-all-recent'.setup{
-			-- your config goes here
-		  }
-		end
 	  }
 	  use {
 		"jiaoshijie/undotree",
@@ -126,4 +122,5 @@ return require("packer").startup(function()
 	  }
 	  --repl
 	  use {'Vigemus/iron.nvim'}
+	  use {"folke/trouble.nvim"}
 end)
