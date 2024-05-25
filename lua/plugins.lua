@@ -21,7 +21,7 @@ return require("packer").startup(function()
         }
       }
 	  --
-	  use "jose-elias-alvarez/null-ls.nvim"
+	  use "nvimtools/none-ls.nvim"
 	  --
 	  use "ray-x/lsp_signature.nvim"
 	  -- comment
@@ -84,12 +84,14 @@ return require("packer").startup(function()
 	  }
 	  --
 	  use {
-		'nvim-telescope/telescope.nvim', tag = '0.1.1',
+		'nvim-telescope/telescope.nvim', tag = '0.1.4',
 	    requires = { {'nvim-lua/plenary.nvim'} }
 	  }
-	  use { "kkharji/sqlite.lua" }
 	  use {
-		'prochri/telescope-all-recent.nvim',
+		"nvim-telescope/telescope-frecency.nvim",
+		config = function()
+		  require("telescope").load_extension "frecency"
+		end,
 	  }
 	  use {
 		"jiaoshijie/undotree",
