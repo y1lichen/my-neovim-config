@@ -21,6 +21,14 @@ require("lazy").setup({
     -- import your plugins
     { import = "plugins" },
   },
+
+  {
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		dependencies = "nvim-treesitter/nvim-treesitter",
+		config = function()
+			require("config.nvim-treesitter-textobjects")
+		end,
+	},
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.
   install = { colorscheme = { "habamax" } },
